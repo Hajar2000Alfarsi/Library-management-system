@@ -20,4 +20,12 @@ public class ItemServices {
         }
         return null;
     }
+
+    public void showAllItems() {
+        for (LibraryItem item: items) {
+            System.out.println("ID: " + item.getId());
+            System.out.println("Name: " + item.getName());
+            System.out.println("Status: " + item.isAvailable());
+        }
+    }
 }
