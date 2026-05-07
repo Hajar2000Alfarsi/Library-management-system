@@ -12,4 +12,10 @@ public class LibraryService {
 
         library.setLibraryAdress("Al Khoudh, Muscat, Oman");
     }
+
+    public void showLibraryInfo() {
+        System.out.println("Name: " + library.getLibraryName());
+        System.out.println("About: " + library.getAboutLibrary());
+        System.out.println("Address: " + library.getLibraryAdress());
+    }
 }
