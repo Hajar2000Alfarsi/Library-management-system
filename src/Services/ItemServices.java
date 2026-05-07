@@ -21,6 +21,16 @@ public class ItemServices {
         return null;
     }
 
+    public LibraryItem getItemById(String id){
+        for (LibraryItem item: items) {
+            if (item.getId().equals(id)){
+                return item;
+            }
+        }
+        return null;
+
+    }
+
     public void showAllItems() {
         for (LibraryItem item: items) {
             System.out.println("ID: " + item.getId());
