@@ -53,7 +53,7 @@ public class ItemServices implements ItemInterface {
 
                     book.setName(title);
                     book.setAuthor(author);
-                    book.isAvailable();
+                    book.setAvailable(true);
                     book.setSetItemType("Book");
 
                     addItem(book);
@@ -70,7 +70,7 @@ public class ItemServices implements ItemInterface {
 
                     magazine.setName(title);
                     magazine.setIssueNumber(issueNumber);
-                    magazine.isAvailable();
+                    magazine.setAvailable(true);
                     magazine.setSetItemType("Magazine");
                     magazine.setId(UUID.randomUUID());
 
@@ -98,7 +98,7 @@ public class ItemServices implements ItemInterface {
                     System.out.println("Book ID: " + book.getId());
                     System.out.println("Book Name: " + book.getName());
                     System.out.println("Author:" + book.getAuthor());
-                    System.out.println("Status: " + book.isAvailable());
+                    System.out.println("Status: " + book.getAvailable());
 
                 } else if (item instanceof Magazine) {
 
@@ -106,7 +106,7 @@ public class ItemServices implements ItemInterface {
                     System.out.println("Magazine ID: " + magazine.getId());
                     System.out.println("Magazine Name: " + magazine.getName());
                     System.out.println("Issue Date:" + magazine.getIssueNumber());
-                    System.out.println("Status: " + magazine.isAvailable());
+                    System.out.println("Status: " + magazine.getAvailable());
 
                 } else {
                     System.out.println("Item Not Found");
@@ -134,14 +134,14 @@ public class ItemServices implements ItemInterface {
                 System.out.println("ID: " + magazine.getId());
                 System.out.println("Name: " + magazine.getName());
                 System.out.println("Issu Date:" + magazine.getIssueNumber());
-                System.out.println("Status: " + magazine.isAvailable());
+                System.out.println("Status: " + magazine.getAvailable());
             } else if (item instanceof Book) {
                 System.out.println("\nBook Details");
                 Book book = (Book) item;
                 System.out.println("ID: " + book.getId());
                 System.out.println("Name: " + book.getName());
                 System.out.println("Author: " + book.getAuthor());
-                System.out.println("Status: " + book.isAvailable());
+                System.out.println("Status: " + book.getAvailable());
             }
         }
     }

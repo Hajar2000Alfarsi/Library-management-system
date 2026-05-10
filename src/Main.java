@@ -1,4 +1,5 @@
 import Menu.Menu;
+import Services.BorrowService;
 import Services.ItemServices;
 import Services.LibraryService;
 import Services.MemberService;
@@ -14,6 +15,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         LibraryService libraryService = new LibraryService();
         MemberService memberService = new MemberService();
+        BorrowService borrowService = new BorrowService();
 
         ItemServices itemServices = new ItemServices();
 
@@ -63,6 +65,17 @@ public class Main {
                 }
 
                 case 4 -> {
+                    Boolean BorrowMenuContinue = true;
+
+                    while (BorrowMenuContinue) {
+                        System.out.println("\n *********** Member Menu ***********");
+                        System.out.println(MenuMessages.BORROW_SERVICE_MENU_MESSAGE);
+                        System.out.println(Constants.ENTER_OPTION);
+
+                        BorrowMenuContinue = borrowService.handleBorrowedMenu(scanner.nextInt());
+                    }
+                }
+                case 5 -> {
                     System.out.println("Exit...");
                     mainMenuContinue = false;
                 }

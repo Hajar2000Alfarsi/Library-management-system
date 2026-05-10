@@ -1,6 +1,7 @@
 package Services;
 
 import Entites.Address;
+import Entites.LibraryItem;
 import Entites.Member;
 import Utils.Constants;
 
@@ -76,6 +77,12 @@ public class MemberService {
             System.out.println("Street: " + m.getAddress().getStreet());
             System.out.println("Postel code: " + m.getAddress().getPostalCode());
 
+            if(member.getBorrowItems() != null){
+                for(LibraryItem item : member.getBorrowItems()){
+                    System.out.print("Borrowed Items: " + item.getName() + " || ");
+                }
+            }
+
         }
     }
 
@@ -99,6 +106,11 @@ public class MemberService {
                 System.out.println("Street: " + m.getAddress().getStreet());
                 System.out.println("Postel code: " + m.getAddress().getPostalCode());
 
+                if(member.getBorrowItems() != null){
+                    for(LibraryItem item : member.getBorrowItems()){
+                        System.out.print("Borrowed Items: " + item.getName() + " || ");
+                    }
+                }
             }
         }
         System.out.println("Member not found");

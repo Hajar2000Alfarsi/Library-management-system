@@ -1,5 +1,7 @@
 package Entites;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Member {
@@ -7,6 +9,7 @@ public class Member {
     private String CivilID;
     private String name;
     private Address address;
+    private List<LibraryItem> borrowItems = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -38,5 +41,17 @@ public class Member {
 
     public void setCivilID(String civilID) {
         CivilID = civilID;
+    }
+
+    public List<LibraryItem> getBorrowItems() {
+        return borrowItems;
+    }
+
+    public void setBorrowItems(List<LibraryItem> borrowItems) {
+        this.borrowItems = borrowItems;
+    }
+
+    public void addBorrowItem(LibraryItem item) {
+        borrowItems.add(item);
     }
 }

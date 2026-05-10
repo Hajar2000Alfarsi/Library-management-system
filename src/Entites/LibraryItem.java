@@ -5,7 +5,7 @@ import java.util.UUID;
 public class LibraryItem {
     private UUID id;
     private String name;
-    private boolean isAvailable = true;
+    private Boolean isAvailable;
     private String setItemType;
 
     public String getSetItemType() {
@@ -32,11 +32,11 @@ public class LibraryItem {
         this.id = id;
     }
 
-    public boolean isAvailable() {
-        return true;
+    public Boolean getAvailable() {
+        return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(Boolean available) {
         isAvailable = available;
     }
 }

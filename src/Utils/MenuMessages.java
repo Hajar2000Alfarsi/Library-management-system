@@ -31,4 +31,9 @@ public class MenuMessages {
             4- Exit 
             """;
 
+    public static String BORROW_SERVICE_MENU_MESSAGE = """
+            1- Borrow 
+            2- Return
+            3- Exit 
+            """;
 }
