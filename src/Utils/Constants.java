@@ -8,6 +8,6 @@ public class Constants {
     public static String ENTER_ITEM_NAME = "Write Title: ";
     public static String ENTER_AUTHOR_NAME = "Write Author Name: ";
     public static String ENTER_ISSUE_NUMBER = "Write issueNumber: ";
-
-
+    public static String FAILED_ADD_MEMEBER = "Failed to add member";
+    public static String SUCCESS_ADD_MEMEBER = "Member added Successfully";
 }

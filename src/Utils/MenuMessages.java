@@ -24,5 +24,11 @@ public class MenuMessages {
             4- Exit 
             """;
 
+    public static String MEMBER_SERVICE_MENU_MESSAGE = """
+            1- Register Member
+            2- Find Member
+            3- List Member
+            4- Exit 
+            """;
 
 }
