@@ -6,6 +6,15 @@ public class LibraryItem {
     private UUID id;
     private String name;
     private boolean isAvailable = true;
+    private String setItemType;
+
+    public String getSetItemType() {
+        return setItemType;
+    }
+
+    public void setSetItemType(String setItemType) {
+        this.setItemType = setItemType;
+    }
 
     public String getName() {
         return name;
@@ -24,7 +33,7 @@ public class LibraryItem {
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return true;
     }
 
     public void setAvailable(boolean available) {

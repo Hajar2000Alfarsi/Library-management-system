@@ -36,17 +36,18 @@ public class Main {
                     }
                 }
 
-               /* case 2 -> {
-                    Boolean MemberExit = true;
+               case 2 -> {
+                    Boolean ItemMenuContinue = true;
 
-                    while (MemberExit) {
-                        System.out.println(MenuMessage.MemberMenu);
+                    while (ItemMenuContinue) {
+                        System.out.println("\n *********** Item Menu ***********");
+                        System.out.println(MenuMessages.ITEM_SERVICE_MENU_MESSAGE);
                         System.out.println(Constants.ENTER_OPTION);
 
-                        MemberExit = memberService.handleMemberMenu(scanner.nextInt());
+                        ItemMenuContinue = itemServices.handleLibraryMenu(scanner.nextInt());
                     }
                 }
-
+                /*
                 case 3 -> {
                     Boolean borrowExit = true;
 

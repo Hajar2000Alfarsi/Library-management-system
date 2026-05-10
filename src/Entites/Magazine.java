@@ -1,6 +1,6 @@
 package Entites;
 
-public class Magazine {
+public class Magazine extends LibraryItem {
     private int issueNumber;
 
     public int getIssueNumber() {
